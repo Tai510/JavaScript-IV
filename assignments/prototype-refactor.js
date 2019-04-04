@@ -32,8 +32,8 @@ Prototype Refactor
     }
     destroy() {
     return(`${this.name} was removed from the game.`);
-    };
     }
+    };
     
     /*
       === CharacterStats ===
@@ -72,7 +72,7 @@ Prototype Refactor
       greet() {
       return `${this.name} offers a greeting in ${this.language}.`;
       }
-      }
+      };
      
     /*
       * Inheritance chain: GameObject -> CharacterStats -> Humanoid
