@@ -4,7 +4,7 @@ constructor(info) {
 this.name = name.info;
 this.age = age.info;
 this.location = location.info;
-this.gendere = gender.info;
+this.gender = gender.info;
 }
 speak() {
     return `Hello my name is ${this.name}, I am from ${this.location}`;
@@ -38,7 +38,7 @@ PRAssignment() {
 }
 };
 
-class Instructor extends Student {
+class ProjectManger extends Instructor {
 constructor(info) {
 super(info);
 this.gradClassNam = gradClassNam.info;
@@ -51,3 +51,35 @@ debugsCode() {
     return `${this.name} debugs ${this.name}'s code on ${this.favLanguage}`
 }
 }
+
+const person = new Person ({
+name: "Tashi" ,
+hobby: "Basketball" ,
+location: "Berkeley,CA",
+gender: "Male",
+});
+console.log(person.speak());
+
+const instructor = new Instructor ({
+name: "Josh Knell",
+specialty: "Banjo",
+catchPhrase: "Lets take a 5 min break",
+favLanguage: "JavaScript"
+});
+console.log(instructor.demo());
+
+const student = new Student ({
+previousBackground : "Chef" ,
+className: "Web 19" ,
+favSubjects: "HTML & CSS" ,
+})
+console.log(student.listsSubjects());
+console.log(student.PRAssignment());
+
+const projectManger = new ProjectManger ({
+gradClassNam: "Lambda PM" ,
+favInstructor: "Josh Knell" ,
+})
+console.log(projectManger.standUp());
+console.log(projectManger.debugsCode());
+
