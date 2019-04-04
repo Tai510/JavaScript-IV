@@ -1,10 +1,10 @@
 // CODE here for your Lambda Classes
 class Person {
 constructor(info) {
-this.name = name.info;
-this.age = age.info;
-this.location = location.info;
-this.gender = gender.info;
+this.name = info.name;
+this.age = info.age;
+this.location = info.location;
+this.gender = info.gender;
 }
 speak() {
     return `Hello my name is ${this.name}, I am from ${this.location}`;
@@ -14,9 +14,9 @@ speak() {
 class Instructor extends Person {
 constructor(info) {
 super(info); 
-this.specialty = specialty.info;
-this.favLanguage = favLanguage.info;
-this.catchPhrase = catchPhrase.info;
+this.specialty = info.specialty;
+this.favLanguage = info.favLanguage;
+this.catchPhrase = info.catchPhrase;
 }
 demo() {
     return `Today we are learning about ${this.favLanguage}`;
@@ -26,9 +26,9 @@ demo() {
 class Student extends Instructor {
 constructor(info) {
 super(info);
-this.previousBackground = previousBackground.info;
-this.className = className.info;
-this.favSubjects = favSubjects.info;
+this.previousBackground = info.previousBackground;
+this.className = info.className;
+this.favSubjects = info.favSubjects;
 }
 listsSubjects() {
     return `Favourite Subjects: ${this.favSubjects} , ${this.favSubjects} , ${this.favSubjects}`;
@@ -41,14 +41,14 @@ PRAssignment() {
 class ProjectManger extends Instructor {
 constructor(info) {
 super(info);
-this.gradClassNam = gradClassNam.info;
-this.favInstructor = favInstructor.this;
+this.gradClassNam = info.gradClassNam;
+this.favInstructor = info.favInstructor;
 }
 standUp() {
-    return `${this.name} announces to ${this.className}, @channel standy times!​​​​​`
+    return `${this.name} announces to ${this.gradClassNam}, @channel standy times!​​​​​`
 }
 debugsCode() {
-    return `${this.name} debugs ${this.name}'s code on ${this.favLanguage}`
+    return `${this.name} debugs ${this.favInstructor}'s code on ${this.gradClassNam}`
 }
 }
 
@@ -69,6 +69,7 @@ favLanguage: "JavaScript"
 console.log(instructor.demo());
 
 const student = new Student ({
+name: "Tashi" ,
 previousBackground : "Chef" ,
 className: "Web 19" ,
 favSubjects: "HTML & CSS" ,
@@ -77,8 +78,10 @@ console.log(student.listsSubjects());
 console.log(student.PRAssignment());
 
 const projectManger = new ProjectManger ({
+name: "Bradley" ,
 gradClassNam: "Lambda PM" ,
 favInstructor: "Josh Knell" ,
+subject: "React" ,
 })
 console.log(projectManger.standUp());
 console.log(projectManger.debugsCode());
